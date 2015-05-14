@@ -17,7 +17,7 @@ public class Base {
 	public static String USER_NAME = "kishorekalapala@digital-nirvana.com";
 	public static String PASS_WORD = "123456";
 	
-	public String authorizationHeader(final String username, final String password) {
+	public static String authorizationHeader(final String username, final String password) {
 		final String auth = username + ":" + password;
 		final byte[] encodedAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 		final String authHeader = "Basic " + new String(encodedAuth);
